@@ -10,6 +10,7 @@
  * if the last digit of n is 0: the string and is 0
  * if the last digit of n is less than 6 and not 0:
  * the string and is less than 6 and not 0
+ * last_digit var will have the last digit of n using operator %
  * Return: Always 0 (Success)
  */
 
@@ -21,8 +22,7 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	last_digit = n % 10; //You can have the last digit of a number
-	//by using % operator (modulo)
+	last_digit = n % 10;
 	if (last_digit > 5)
 	{
 		printf("Last digit of %d is %d and is greater than 5\n", n, last_digit);
