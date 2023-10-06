@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * This program use putchar to print the alphabet 
+ * This program use putchar to print the alphabet
  * first in lowercase, then in upper case.
  * we are allowed to use only putchar 3 times.
  * no printf or get allowed
