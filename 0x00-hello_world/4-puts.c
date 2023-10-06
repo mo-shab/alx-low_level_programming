@@ -1,7 +1,9 @@
 #include <stdio.h>
-int main(void)
+int main(void) /*This is a Main function*/
 {
-	char* str = "\"Programming is like building a multilingual puzzle\n";
+	char *str = "\"Programming is like building a multilingual puzzle";
+
 	puts(str); /*This is the function puts*/
-	return 0;
+	
+	return (0);
 }
