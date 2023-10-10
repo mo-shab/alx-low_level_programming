@@ -11,7 +11,9 @@ int main(void)
 char ch[] = "_putchar";
 int i=0;
 for( i =0; i<9;i++)
-main(ch[i]);
-main("\n");
+{
+_putchar(ch[i]);
+}
+_putchar("\n");
 return 0;
 }
