@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <main.h>
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
@@ -6,8 +6,12 @@
  * Return: On success 0.
  * On error, -1 is returned, and errno is set appropriately.
  */
-void main(void)
+int main(void)
 {
-printf("_puthchar\n");
+char ch[] = "_putchar";
+int i=0;
+for( i =0; i<9;i++)
+main(ch[i]);
+main("\n");
 return 0;
 }
