@@ -8,12 +8,13 @@
  */
 int main(void)
 {
-char ch[] = "_putchar";
-int i=0;
-for( i =0; i<9;i++)
-{
-_putchar(ch[i]);
-}
-_putchar('\n');
-return 0;
+	char c[] = "_putchar";
+	int i;
+
+	for (i = 0; i < 8; i++)
+	{
+		_putchar(c[i]);
+	}
+	_putchar('\n');
+	return (0);
 }
