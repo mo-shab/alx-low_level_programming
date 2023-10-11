@@ -4,7 +4,7 @@
  * retunr 1 if c is lowercase
  * return 0 is otherwise
  */
-int _islower(int c);
+int _islower(int c)
 {
 if( c == 'c')
 {
