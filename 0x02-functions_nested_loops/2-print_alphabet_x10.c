@@ -1,9 +1,8 @@
 #include "main.h"
 /**
-* print_alphabet_x10
-* wirte function that print 10 times the alphabet
-* return 0 if success
-*/
+  * print_alphabet_x10 - print the alphabet 10 times.
+  * Return: Nothing.
+  */
 void print_alphabet_x10(void)
 {
 char c;
