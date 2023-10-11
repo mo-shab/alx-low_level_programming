@@ -1,5 +1,5 @@
 #include "main.h"
-/*
+/**
 * print_alphabet_x10
 * wirte function that print 10 times the alphabet
 * return 0 if success
