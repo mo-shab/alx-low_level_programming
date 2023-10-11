@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * Prototype : int _isloer (int c);
- * retunr 1 if c is lowercase
- * return 0 is otherwise
+ * _islower - tests whether a character is a
+ * lowercase.
+ * Return: 1 if it is a lowercase letter, 0 if it is not a lowercase letter.
  */
 int _islower(int c)
 {
-if (c >= 'a' && c<= 'z')
+if (c >= 'a' && c <= 'z')
 {
 return (1);
 }
