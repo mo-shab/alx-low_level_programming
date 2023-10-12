@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* mul(int a, int b) - multiple 2 integers
+* mul - multiple 2 integers
 * @a: first integer
 * @b: second integer
 * return: the multiplication of the 2 int
