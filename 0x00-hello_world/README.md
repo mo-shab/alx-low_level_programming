@@ -35,11 +35,9 @@ In this project, you will:
 
 7. **6-size.c**: Write a C program that prints the size of various types on the computer it is compiled and run on.
 
-8. **Blogpost**: Write a blog post that explains all the steps of compilation, using `gcc` as the compiler. 
+8. **100-intel**: Write a script that generates the assembly code (Intel syntax) of a C code and saves it in an output file. The C file name will be saved in the variable `$CFILE`.
 
-9. **100-intel**: Write a script that generates the assembly code (Intel syntax) of a C code and saves it in an output file. The C file name will be saved in the variable `$CFILE`.
-
-10. **101-quote.c**: Write a C program that prints "and that piece of art is useful" - Dora Korpar, 2015-10-19, to the standard error.
+9. **101-quote.c**: Write a C program that prints "and that piece of art is useful" - Dora Korpar, 2015-10-19, to the standard error.
 
 ## Technologies Used
 
