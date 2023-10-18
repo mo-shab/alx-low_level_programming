@@ -4,16 +4,18 @@
  * @dest: the destination of the appends
  * return: a pointer to the result dest
  */
- char *_strcat(char *dest, char *src)
- {
-int i, j;
-
-for( i = 0; dest[i] != '\0'; i++)
-for ( j = 0; src[j] != '\0'; j++)
+char *_strcat(char *dest, char *src)
 {
-dest[i] = src[j];
-i++;
+while (*dest != '\0')
+{
+dest++;
 }
-dest[i] = '\0';
-return (&dest);
+while (*src != '\0')
+{
+*dest = *src;
+dest++;
+src++;
+}
+*dest = '\0';
+return (dest);
 }
