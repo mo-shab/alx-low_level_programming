@@ -1,3 +1,4 @@
+ #include "main.h"
  /**
  * _strcat - function appends the src to dest with \0 at the end
  * @src: The char source
@@ -19,3 +20,4 @@ src++;
 *dest = '\0';
 return (dest);
 }
+
