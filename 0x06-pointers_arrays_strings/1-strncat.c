@@ -1,3 +1,4 @@
+  GNU nano 6.2                                 1-strncat.c
 #include "main.h"
 /**
 * _strncat - function appends the src to dest with max n from src
@@ -9,18 +10,17 @@
 char *_strncat(char *dest, char *src, int n)
 {
 char *var = dest;
-int i = 0;
 
 while (*dest != '\0')
 {
 dest++;
 }
-while (i != n)
+while (n > 0 && *src != '\0')
 {
 *dest = *src;
 dest++;
 src++;
-i++;
+n--;
 }
 *dest = '\0';
 return (var);
