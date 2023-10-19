@@ -25,3 +25,4 @@ i++;
 *dest = '\0';
 return (var);
 }
+
