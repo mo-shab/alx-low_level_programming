@@ -1,4 +1,3 @@
-  GNU nano 6.2                                 1-strncat.c
 #include "main.h"
 /**
 * _strncat - function appends the src to dest with max n from src
