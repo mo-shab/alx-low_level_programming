@@ -1,44 +1,54 @@
+nclude <stdio.h>
 #include "main.h"
-#include <stdio.h>
-#include <string.h>
+
 /**
- * infinite_add - adds two integers stored as strings
- *
- * @n1: first integer string to add
- * @n2: second integer string to add
- * @r: array to store resulting string in
- * @size_r: size of array r
- *
- * Return: the summed string in r. If r is too small for the result,
- * return 0;
- */
+ *  * infinite_add - adds two numbers
+ *   * @n1: number one.
+ *    * @n2: number two.
+ *     * @r: buffer that the function will use to store the result.
+ *      * @size_r: buffer size:
+ *       * Return: the pointer to dest.
+ *        */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-int len1 = strlen(n1);
-int len2 = strlen(n2);
-int carry;
-int index_r;
-int digit1, digit2, sum;
-if (len1 + len2 >= size_r)
-{
-return 0;
-}
-carry = 0;
-index_r = 0;
-while (len1 > 0 || len2 > 0 || carry > 0) {
-digit1 = (len1 > 0) ? n1[--len1] - '0' : 0;
-digit2 = (len2 > 0) ? n2[--len2] - '0' : 0;
-int sum = digit1 + digit2 + carry;
-carry = sum / 10;
-r[index_r++] = (sum % 10) + '0';
-}
-r[index_r] = '\0';
-for (int i = 0, j = index_r - 1; i < j; i++, j--)
-{
-char temp = r[i];
-r[i] = r[j];
-r[j] = temp;
-}
-return r;
-}
+		int c1 = 0, c2 = 0, op, bg, dr1, dr2, add = 0;
 
+			while (*(n1 + c1) != '\0')
+						c1++;
+				while (*(n2 + c2) != '\0')
+							c2++;
+					if (c1 >= c2)
+								bg = c1;
+						else
+									bg = c2;
+							if (size_r <= bg + 1)
+										return (0);
+								r[bg + 1] = '\0';
+									c1--, c2--, size_r--;
+										dr1 = *(n1 + c1) - 48, dr2 = *(n2 + c2) - 48;
+											while (bg >= 0)
+													{
+																op = dr1 + dr2 + add;
+																		if (op >= 10)
+																						add = op / 10;
+																				else
+																								add = 0;
+																						if (op > 0)
+																									*(r + bg) = (op % 10) + 48;
+																								else
+																												*(r + bg) = '0';
+																										if (c1 > 0)
+																														c1--, dr1 = *(n1 + c1) - 48;
+																												else
+																																dr1 = 0;
+																														if (c2 > 0)
+																																		c2--, dr2 = *(n2 + c2) - 48;
+																																else
+																																				dr2 = 0;
+																																		bg--, size_r--;
+																																			}
+												if (*(r) == '0')
+															return (r + 1);
+													else
+																return (r);
+}
