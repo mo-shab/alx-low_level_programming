@@ -1,21 +1,29 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
-* rot13 - function that rotate by 13
-* @str: string to be rotated
-* Return: stirn rotated
-*/
-char *rot13(char *str)
+  * rot13 - ...
+  * @s: ...
+  *
+  * Return: ...
+  */
+char *rot13(char *s)
 {
-int i;
-char c, base;
-for (i = 0; str[i] != '\0'; i++)
+int a = 0;
+
+while (s[a])
 {
-c = str[i];
-if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+while ((s[a] >= 'a' && s[a] <= 'z') || (s[a] >= 'A' && s[a] <= 'Z'))
 {
-base = (c >= 'a' && c <= 'z') ? 'a' : 'A';
-str[i] = (c - base + 13) % 26 + base;
+if ((s[a] > 'm' && s[a] <= 'z') || (s[a] > 'M' && s[a] <= 'Z'))
+{
+s[a] -= 13;
+break;
 }
+s[a] += 13;
+break;
 }
-return (str);
+a++;
+}
+return (s);
 }
