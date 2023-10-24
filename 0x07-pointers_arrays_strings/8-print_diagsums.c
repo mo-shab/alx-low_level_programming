@@ -31,5 +31,5 @@ sum += (a + i)[j];
 }
 }
 }
-printf("%d", sum);
+printf("%d\n", sum);
 }
