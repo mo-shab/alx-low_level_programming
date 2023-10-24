@@ -21,9 +21,9 @@ sum += (a + i)[j];
 }
 printf("%d,", sum);
 sum = 0;
-for (i = size; i >= 0; i--)
+for (i = size; i != 0; i--)
 {
-for (j = size; j >= 0; j++)
+for (j = size; j != 0; j++)
 {
 if (i == j)
 {
