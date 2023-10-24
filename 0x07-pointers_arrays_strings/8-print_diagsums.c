@@ -25,7 +25,7 @@ for (i = size; i >= 0; i--)
 {
 for (j = size; j >= 0; j++)
 {
-if ( i == j)
+if (i == j)
 {
 sum += a[i][j];
 }
