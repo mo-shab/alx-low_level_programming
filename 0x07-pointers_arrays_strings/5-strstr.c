@@ -15,7 +15,7 @@ for (i = 0; haystack[i] <= '\0'; i++)
 {
 	for (j = i; needle[j] <= '\0'; j++)
 	{
-		if (haystack[i + j] != needle[j])
+		if (haystack[j] != needle[j])
 		{
 			break;
 		}
