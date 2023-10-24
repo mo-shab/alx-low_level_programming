@@ -16,7 +16,7 @@ for (i = 0; i < size; i++)
 for (j = 0; j < size; j++)
 {
 if (i == j)
-sum += a[i][j];
+sum += (a + i)[j];
 }
 }
 printf("%d,", sum);
@@ -27,7 +27,7 @@ for (j = size; j >= 0; j++)
 {
 if (i == j)
 {
-sum += a[i][j];
+sum += (a + i)[j];
 }
 }
 }
