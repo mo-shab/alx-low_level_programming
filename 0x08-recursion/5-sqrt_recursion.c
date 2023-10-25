@@ -13,6 +13,7 @@ return (_sqrt(n, 1));
 /**
 * _sqrt - function to check
 * @j: iterated number
+* Return:   -1 or square number
 */
 int _sqrt(int n, int j)
 {
