@@ -1,5 +1,5 @@
 #include "main.h"
-/** 
+/**
 *factorial - function to calcule factioral
 * @n: the number we will calcul it's factorial
 * Return: 1 if n == 1 or 0
