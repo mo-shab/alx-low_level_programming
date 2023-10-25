@@ -1,12 +1,13 @@
 #include "main.h"
 #include <string.h>
 /**
-* _puts_recursion - function to print a char s
+* _print_rev_recursion - function to print a char s
 * @s: the string we want to print
 * Return: nothing
 */
-void _puts_recursion(char *s)
+void _print_rev_recursion(char *s)
 {
+*s = strrev(s);
 if (*s == '\0')
 {
 _putchar('\n');
@@ -14,6 +15,5 @@ return;
 }
 _putchar(*s);
 s++;
-_puts_recursion(s);
+_print_rev_recursion(s);
 }
-
