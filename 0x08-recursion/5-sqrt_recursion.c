@@ -8,9 +8,12 @@ int _sqrt(int n, int j);
 
 int _sqrt_recursion(int n)
 {
-return _sqrt(n , 1);
+return (_sqrt(n, 1));
 }
-
+/**
+* _sqrt - function to check
+* @j: iterated number
+*/
 int _sqrt(int n, int j)
 {
 int sq = j * j;
