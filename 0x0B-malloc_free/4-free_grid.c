@@ -5,6 +5,7 @@
 /**
  * free_grid - function that free grid memory
  * @grid: the grid to be freed.
+ * @height: the hight of grid
  *
  * Return: Nothing.
  */
