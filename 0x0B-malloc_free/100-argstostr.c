@@ -7,7 +7,7 @@
  * @ac: the count of the arguments
  * @av: array of the arguments
  *
- * Retrun: NULL if ac == 0 or av ==NULL
+ * Return: NULL if ac == 0 or av ==NULL
  */
 
 char *argstostr(int ac, char **av)
@@ -26,7 +26,7 @@ char *argstostr(int ac, char **av)
 	}
 	result = malloc(total_len + 1);
 	if (result == NULL)
-		return NULL;
+		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
 		if (av[i] != NULL)
