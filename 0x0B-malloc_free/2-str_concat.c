@@ -15,10 +15,44 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *new_s;
-	int len_s1 = 0, len_s2 = 0, i_s1, i_s2, i_news;
+	int len_s1 = 0, len_s2 = 0, i_s1 = 0, i_s2 = 0, i_news = 0;
 
-	if (s1 == NULL && s2 == NULL)
-		return (NULL);
+	if (s1 == NULL)
+	{
+		while (s2[len_s2] != '\0')
+		{
+			len_s2++;
+		}
+		new_s = malloc(sizeof(char) * (len_s2 + 1));
+		if (new_s == NULL)
+			return (NULL);
+		i_s2 = 0;
+		while (i_s2 < len_s2)
+		{
+			new_s[i_s2] = s2[i_s2];
+			i_s2++;
+		}
+		new_s[i_s2] = '\0';
+		return (new_s);
+	}
+	if (s2 == NULL)
+	{
+		while (s1[len_s1] != '\0')
+		{
+			len_s1++;
+		}
+		new_s = malloc(sizeof(char) * (len_s1 + 1));
+		if (new_s == NULL)
+			return (NULL);
+		i_s1 = 0;
+		while (i_s1 < len_s1)
+		{
+			new_s[i_s1] = s1[i_s1];
+			i_s1++;
+		}
+		new_s[i_s1] = '\0';
+		return (new_s);
+	}
 	while (s1[len_s1] != '\0')
 	{
 		len_s1++;
@@ -30,7 +64,7 @@ char *str_concat(char *s1, char *s2)
 	i_s1 = 0;
 	i_s2 = 0;
 	i_news = 0;
-	new_s = malloc(sizeof(char) * (len_s1 + len_s2));
+	new_s = malloc(sizeof(char) * (len_s1 + len_s2 + 1));
 	if (new_s == NULL)
 		return (NULL);
 	while (i_s1 < len_s1)
