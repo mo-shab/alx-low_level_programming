@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "main.h"
 /**
-  * _puts - function that print a string followed by new line.
+  * _put - function that print a string followed by new line.
   * @str: the stiring to be printed
   *
   * Return: nothing
@@ -23,7 +23,7 @@ void _put(char *str)
  * Return: nothing
  */
 
-int main ()
+int main(void)
 {
 	_put(__FILE__);
 	return (0);
