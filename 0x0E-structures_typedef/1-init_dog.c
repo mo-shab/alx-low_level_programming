@@ -1,5 +1,5 @@
 #include "dog.h"
-
+#include <stdlib.h>
 /**
  * init_dog - Function that initialize variable of tupe struct dog
  * @d: Name struct of the dog to be initialized
