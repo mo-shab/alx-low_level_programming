@@ -9,15 +9,19 @@
  * Return: Count of str
  */
 
-int _strlen(char *str)
+int _strlen(char *s)
 {
-	int count = 0;
+	int len = 0;
 
-	while (str[count] != '\0')
-		count++;
+	while (*s != '\0')
+	{
+		len++;
+		s++;
+	}
 
-	return (count);
+	return (len);
 }
+
 
 /**
  * _strcpy - copy string
@@ -29,17 +33,18 @@ int _strlen(char *str)
 
 char *_strcpy(char *src, char *dest)
 {
-	int count = 0;
+	int i;
 
-	while (src[count] != '\0')
+	for (i = 0; src[i] != '\0'; i++)
 	{
-		dest[count] = src[count];
-		count++;
+		dest[i] = src[i];
 	}
-	dest[count] = '\0';
+
+	dest[i++] = '\0';
 
 	return (dest);
 }
+
 
 /**
  * new_dog - function that create new dog
@@ -54,7 +59,7 @@ char *_strcpy(char *src, char *dest)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *n_d;
-	int len_name;
+	int len_name, len_owner;
 
 	n_d = malloc(sizeof(dog_t));
 	if (n_d == NULL)
@@ -68,11 +73,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	n_d->name = _strcpy(name, n_d->name);
 	n_d->age = age;
-	n_d->owner = malloc(sizeof(char) * _strlen(n_d->owner));
+	len_owner = _strlen(owner);
+	n_d->owner = malloc(sizeof(char) * len_owner);
 	if (n_d->owner == NULL)
 	{
 		free(n_d);
-		free(n_d->name);
 		return (NULL);
 	}
 	n_d->owner = _strcpy(owner, n_d->owner);
