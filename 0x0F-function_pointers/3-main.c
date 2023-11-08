@@ -11,6 +11,7 @@
 
 int main(int argc, char **argv)
 {
+	char op;
 	int a, b, ans;
 	int (*fp)(int, int);
 
@@ -23,6 +24,12 @@ int main(int argc, char **argv)
 	{
 		printf("Error\n");
 		exit(99);
+	}
+	op = *(argv[2]);
+	if ((op == '/' || op == '%') && !atoi(argv[3]))
+	{
+		printf("Error\n");
+		return (100);
 	}
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
