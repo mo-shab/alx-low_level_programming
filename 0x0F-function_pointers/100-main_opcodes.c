@@ -4,10 +4,9 @@
 
 /**
  * main - Prints the opcodes of the main function.
- *
  * @argc: The number of command-line arguments.
  * @argv: An array of strings containing the command-line arguments.
- * @Return: 0 if the program executed successfully,
+ * Return: 0 if the program executed successfully,
  * 1 if the number of arguments is incorrect,
  * 2 if the number of bytes is negative.
  */
