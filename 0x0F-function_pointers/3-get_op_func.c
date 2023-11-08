@@ -1,4 +1,4 @@
-#include 3-calc.h"
+#include "3-calc.h"
 
 /**
  * get_op_func - select the correct function to performe
@@ -6,7 +6,7 @@
  * Return : a pointer to the correct function
  */
 
-int (*get_op_func(char *s)(int a, int b)
+int (*get_op_func(char *s))(int a, int b)
 {
 	op_t ops[] = {
 		{"+", op_add},
@@ -16,14 +16,15 @@ int (*get_op_func(char *s)(int a, int b)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int i;
+	int i = 0;
 
-	while (i < 5)
+	while (ops[i].f != NULL)
 	{
-		if (*s == *(ops[i].op))
+		if (*s == *(ops[i].op) && s[1] == '\0')
 			return (ops[i].f);
 		i++;
 	}
 
-	return (ops[i].f);
+	printf("Error\n");
+	exit(99);
 }

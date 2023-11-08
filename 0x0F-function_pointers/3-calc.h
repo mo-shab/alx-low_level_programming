@@ -1,5 +1,9 @@
-#ifndef _3_CAL_H
-#define _3_CAL_H
+#ifndef CALC_H
+#define CALC_H
+#include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 typedef struct op
 {
 	char *op;
@@ -11,5 +15,5 @@ int op_sub(int a, int b);
 int op_mul(int a, int b);
 int op_div(int a, int b);
 int op_mod(int a, int b);
-int (*get_op_func(char *s))(int, int);
+int (*get_op_func(char *s))(int a, int b);
 #endif
