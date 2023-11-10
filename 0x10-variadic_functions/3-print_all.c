@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdarg.h>
 #include "variadic_functions.h"
 
 /**
@@ -7,7 +9,7 @@
  */
 void printf_char(va_list list)
 {
-	printf("%c", va_arg(list, char));
+	printf("%c", (char) va_arg(list, int));
 }
 
 /**
@@ -27,11 +29,11 @@ void printf_int(va_list list)
  */
 void printf_float(va_list list)
 {
-	printf("%f", va_arg(list, float));
+	printf("%f", (float) va_arg(list, double));
 }
 
 /**
- * printf_string - print a string from args
+ * printf_string - print a string from var args
  * @list: va_list to print from
  * Return: Nothing
  */
@@ -53,31 +55,30 @@ void printf_string(va_list list)
  * @format: string containing type information for args
  * Return: Nothing
  */
-void printAll(const char * const format, ...)
+void print_all(const char * const format, ...)
 {
 	const char *ptr;
 	va_list list;
-	FormatKey key[4] = {{printChar, 'c'}, {printInt, 'i'},
-				{printFloat, 'f'}, {printString, 's'}};
-	int keyIndex = 0, notFirst = 0;
+	fun key[4] = { {printf_char, 'c'}, {printf_int, 'i'},
+			   {printf_float, 'f'}, {printf_string, 's'} };
+	int keyI = 0, notfirst = 0;
 
 	ptr = format;
 	va_start(list, format);
-
 	while (format != NULL && *ptr)
 	{
-		if (key[keyIndex].spec == *ptr)
+		if (key[keyI].spec == *ptr)
 		{
-			if (notFirst)
+			if (notfirst)
 				printf(", ");
-			notFirst = 1;
-			key[keyIndex].printer(list);
+			notfirst = 1;
+			key[keyI].f(list);
 			ptr++;
-			keyIndex = -1;
+			keyI = -1;
 		}
-		keyIndex++;
-		ptr += keyIndex / 4;
-		keyIndex %= 4;
+		keyI++;
+		ptr += keyI / 4;
+		keyI %= 4;
 	}
 	printf("\n");
 
