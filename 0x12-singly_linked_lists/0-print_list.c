@@ -13,6 +13,10 @@ int n = 0;
 list_t *current;
 
 current = (list_t *)malloc(sizeof(list_t));
+if (current == NULL)
+{
+return (-1);
+}
 *current = *h;
 while (current != NULL)
 {
