@@ -4,24 +4,17 @@ This directory encompasses the low-level programming journey of Mohammed SHAB, b
 
 ## Folder Structure
 
-1. **[0x00-hello_world](0x00-hello_world):** Introduction to C - "Hello, World"
-2. **[0x01-variables_if_else_while](0x01-variables_if_else_while):** Variables, if, else, while
-3. **[0x02-functions_nested_loops](0x02-functions_nested_loops):** Functions, nested loops
-4. **[0x03-more_functions_nested_loops](0x03-more_functions_nested_loops):** More functions, more nested loops
-5. **[0x04-pointers_arrays_strings](0x04-pointers_arrays_strings):** Pointers, arrays, and strings
-6. **[0x05-more_pointers_arrays_strings](0x05-more_pointers_arrays_strings):** More pointers, arrays, and strings
-7. **[0x06-even_more_pointers_arrays_strings](0x06-even_more_pointers_arrays_strings):** Even more pointers, arrays, and strings
-8. **[0x07-recursion](0x07-recursion):** Recursion
-9. **[0x08-static_libraries](0x08-static_libraries):** Static libraries
-10. **[0x09-argc_argv](0x09-argc_argv):** argc, argv
-11. **[0x0A-malloc_free](0x0A-malloc_free):** malloc, free
-12. **[0x0C-more_malloc_free](0x0C-more_malloc_free):** More malloc, free
-13. **[0x0D-preprocessor](0x0D-preprocessor):** Preprocessor
-14. **[0x0E-structures_typedef](0x0C-structures_typedef):** Structures, typedef
-15. **[0x0F-function_pointers](0x0F-function_pointers):** Function pointers
-16. **[0x10-variadic_functions](0x10-variadic_functions):** Variadic functions
-17. **[0x12-singly_linked_lists](0x12-singly_linked_lists):** Singly linked lists
-
+1. [0x00-hello_world](0x00-hello_world): This folder contains an introduction to the C language.
+2. [0x01-variables_if_else_while](0x01-variables_if_else_while): In this folder, you will find programs that teach you how to work with variables and conditions.
+3. [0x02-functions_nested_loops](0x02-functions_nested_loops): Explore this folder to become familiar with functions and loops.
+4. [0x03-debugging](0x03-debugging): Here, you'll learn debugging techniques and how to spot errors in C code.
+5. [0x04-more_functions_nested_loops](0x04-more_functions_nested_loops): Dive into this folder for more advanced uses of functions and loops.
+6. [0x05-pointers_arrays_strings](0x05-pointers_arrays_strings): This folder introduces you to pointers, arrays, and strings in C.
+7. [0x06-pointers_arrays_strings](0x06-pointers_arrays_strings): Continue your exploration of pointers, arrays, and strings in this folder.
+8. [0x07-pointers_arrays_strings](0x07-pointers_arrays_strings): Further deepen your understanding of pointers, arrays, and strings.
+9. [0x08-recursion](0x08-recursion): In this folder, you will delve into the concept of recursion in C.
+10. [0x09-static_libraries](0x09-static_libraries): Learn about static libraries and how to create them in this section.
+11. [0x0A-argc_argv](0x0A-argc_argv): Explore how to work with command-line arguments in C.
 
 This repository serves as a valuable resource for learning low-level programming with C. Each folder is designed to build your skills progressively, from the basics to more advanced concepts.
 
