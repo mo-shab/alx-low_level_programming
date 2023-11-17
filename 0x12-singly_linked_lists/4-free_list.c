@@ -13,8 +13,8 @@ list_t *current;
 while (head != NULL)
 {
 current = head->next;
-free(current->str);
-free(current);
+free(head->str);
+free(head);
 head = current;
 }
 }
