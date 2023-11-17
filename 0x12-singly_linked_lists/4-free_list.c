@@ -2,7 +2,7 @@
 /**
  * free_list - function that free list
  * @head: list to be freed
- * 
+ *
  * Return: Nothing
 */
 
