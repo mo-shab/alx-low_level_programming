@@ -1,5 +1,7 @@
 #include "lists.h"
 
+void before_main() __attribute__((constructor));
+
 /**
  * before_main - function that execute before main
  * Return: Nothing
