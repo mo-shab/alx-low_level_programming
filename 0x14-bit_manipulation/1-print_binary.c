@@ -2,21 +2,24 @@
 
 /**
  * print_binary - function that prints the binary representation of a number.
- * @b: The binary
- * 
+ * @n: The binary
+ *
  * Return: Nothing
 */
 void print_binary(unsigned long int n)
 {
-    int var, i;
+	int bit = sizeof(n) * 8, prin = 0;
 
-    for (i = 31; i>=0; i--)
-    {
-        var >> n + i;
-        if (var & 1)
-            _putchar('1');
-        else
-            _putchar('0');
-    }
-    _putchar('\n');
+	while (bit)
+	{
+		if (n & 1L << --bit)
+		{
+			_putchar('1');
+			prin++;
+		}
+		else if (prin)
+			_putchar('0');
+	}
+	if (!prin)
+	_putchar('0');
 }
