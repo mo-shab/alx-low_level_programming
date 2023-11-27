@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /**
  * read_textfile - function that read text file and print it
  * @filename: The name of the file
@@ -17,16 +16,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buffer = malloc(letters);
 	if (buffer == NULL)
 		return (0);
-
 	if (filename == NULL)
- 		return (0);
-
+		return (0);
 	file_descriptor = open(filename, O_RDONLY);
-
 	if (file_descriptor == -1)
 	{
 		free(buffer);
- 		return (0);
+		return (0);
 	}
 	letters_read = read(file_descriptor, buffer, letters);
 	bytes_written = write(STDOUT_FILENO, buffer, letters_read);
