@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	char buffer[BUFFER_SIZE];
 
 	if (argc != 3)
-		print_err_exit(97, "Usage: %s file_from file_to\n", argv[0]);
+		print_err_exit(97, "Usage: cp file_from file_to\n", argv[0]);
 	file_from = open(argv[1], O_RDONLY);
 	if (file_from == -1)
 		print_err_exit(98, "Error: Can't read from file %s\n", argv[1]);
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	if (file_to == -1)
 	{
 		close(file_from);
-		print_err_exit(99, "Error: Can't write to  %s\n", argv[2]);
+		print_err_exit(99, "Error: Can't write to %s\n", argv[2]);
 	}
 	while ((bytes_read = read(file_from, buffer, BUFFER_SIZE)) > 0)
 	{
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 		{
 			close(file_from);
 			close(file_to);
-			print_err_exit(99, "Error: Can't write to file %s\n", argv[2]);
+			print_err_exit(99, "Error: Can't write to %s\n", argv[2]);
 		}
 	}
 	if (bytes_read == -1)
