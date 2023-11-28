@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	if (file_to == -1)
 	{
 		close(file_from);
-		print_err_exit(99, "Error: Can't write to file %s\n", argv[2]);
+		print_err_exit(99, "Error: Can't write to  %s\n", argv[2]);
 	}
 	while ((bytes_read = read(file_from, buffer, BUFFER_SIZE)) > 0)
 	{
